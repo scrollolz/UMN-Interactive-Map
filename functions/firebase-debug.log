@@ -1,0 +1,517 @@
+[debug] [2026-06-11T18:07:58.343Z] ----------------------------------------------------------------------
+[debug] [2026-06-11T18:07:58.355Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\JuliaFaig\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2026-06-11T18:07:58.355Z] CLI Version:   15.20.0
+[debug] [2026-06-11T18:07:58.355Z] Platform:      win32
+[debug] [2026-06-11T18:07:58.356Z] Node Version:  v24.16.0
+[debug] [2026-06-11T18:07:58.356Z] Time:          Thu Jun 11 2026 13:07:58 GMT-0500 (Central Daylight Time)
+[debug] [2026-06-11T18:07:58.356Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-06-11T18:08:04.989Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-06-11T18:08:04.990Z] > authorizing via signed-in user (julia.faig8@gmail.com)
+[debug] [2026-06-11T18:08:04.990Z] [iam] checking project umn-interactive-map for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-06-11T18:08:04.994Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:04.994Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:04.995Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/umn-interactive-map:testIamPermissions [none]
+[debug] [2026-06-11T18:08:04.995Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/umn-interactive-map:testIamPermissions  x-goog-user-project=umn-interactive-map
+[debug] [2026-06-11T18:08:04.996Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/umn-interactive-map:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-06-11T18:08:05.173Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/umn-interactive-map:testIamPermissions 200
+[debug] [2026-06-11T18:08:05.173Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/umn-interactive-map:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-06-11T18:08:05.173Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:05.174Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:05.174Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/umn-interactive-map/serviceAccounts/umn-interactive-map@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2026-06-11T18:08:05.174Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/umn-interactive-map/serviceAccounts/umn-interactive-map@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2026-06-11T18:08:05.341Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/umn-interactive-map/serviceAccounts/umn-interactive-map@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2026-06-11T18:08:05.342Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/umn-interactive-map/serviceAccounts/umn-interactive-map@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2026-06-11T18:08:05.343Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:05.343Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:05.343Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/umn-interactive-map [none]
+[debug] [2026-06-11T18:08:05.555Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/umn-interactive-map 200
+[debug] [2026-06-11T18:08:05.556Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/umn-interactive-map {"projectId":"umn-interactive-map","projectNumber":"1038286025751","displayName":"UMN Interactive Map","name":"projects/umn-interactive-map","resources":{"hostingSite":"umn-interactive-map"},"state":"ACTIVE","etag":"1_063a9265-641c-453d-bf47-ee4ddd5a537b"}
+[info] 
+[info] === Deploying to 'umn-interactive-map'...
+[info] 
+[info] i  deploying firestore, functions, hosting 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] +  functions: Finished running predeploy script. 
+[info] i  firestore: ensuring required API firestore.googleapis.com is enabled... 
+[info] i  firestore: ensuring required API firestore.googleapis.com is enabled... 
+[debug] [2026-06-11T18:08:10.341Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:10.341Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:10.342Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/umn-interactive-map/databases/(default) [none]
+[debug] [2026-06-11T18:08:10.801Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/umn-interactive-map/databases/(default) 200
+[debug] [2026-06-11T18:08:10.801Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/umn-interactive-map/databases/(default) {"name":"projects/umn-interactive-map/databases/(default)","uid":"c6bb9bf0-691a-4555-918e-cfc572d22d24","createTime":"2026-06-11T18:06:50.028289Z","updateTime":"2026-06-11T18:06:50.028289Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2026-06-11T18:06:50.028289Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","databaseEdition":"STANDARD","freeTier":true,"realtimeUpdatesMode":"REALTIME_UPDATES_MODE_ENABLED","etag":"IImD5PHj/5QDMNLRks3j/5QD"}
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2026-06-11T18:08:10.810Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:10.810Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:10.810Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/umn-interactive-map:test [none]
+[debug] [2026-06-11T18:08:10.810Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/umn-interactive-map:test [omitted]
+[debug] [2026-06-11T18:08:10.998Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/umn-interactive-map:test 200
+[debug] [2026-06-11T18:08:10.998Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/umn-interactive-map:test {}
+[info] +  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2026-06-11T18:08:11.003Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:11.003Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:11.004Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/umn-interactive-map [none]
+[debug] [2026-06-11T18:08:11.195Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/umn-interactive-map 200
+[debug] [2026-06-11T18:08:11.195Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/umn-interactive-map {"projectNumber":"1038286025751","projectId":"umn-interactive-map","lifecycleState":"ACTIVE","name":"UMN Interactive Map","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-06-11T16:06:35.751Z"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2026-06-11T18:08:11.215Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:11.215Z] Checked if tokens are valid: true, expires at: 1781203818720
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2026-06-11T18:08:11.220Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:11.221Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:11.222Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/cloudbuild.googleapis.com [none]
+[debug] [2026-06-11T18:08:11.222Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/cloudbuild.googleapis.com  x-goog-user-project=umn-interactive-map
+[debug] [2026-06-11T18:08:11.224Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/artifactregistry.googleapis.com [none]
+[debug] [2026-06-11T18:08:11.224Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/artifactregistry.googleapis.com  x-goog-user-project=umn-interactive-map
+[debug] [2026-06-11T18:08:11.493Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/cloudbuild.googleapis.com 200
+[debug] [2026-06-11T18:08:11.493Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/cloudbuild.googleapis.com [omitted]
+[warn] !  functions: missing required API cloudbuild.googleapis.com. Enabling now... 
+[debug] [2026-06-11T18:08:11.494Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:11.494Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:11.495Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/cloudbuild.googleapis.com:enable [none]
+[debug] [2026-06-11T18:08:11.495Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/cloudbuild.googleapis.com:enable  x-goog-user-project=umn-interactive-map
+[debug] [2026-06-11T18:08:11.502Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/artifactregistry.googleapis.com 200
+[debug] [2026-06-11T18:08:11.502Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/artifactregistry.googleapis.com [omitted]
+[warn] !  artifactregistry: missing required API artifactregistry.googleapis.com. Enabling now... 
+[debug] [2026-06-11T18:08:11.503Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:11.503Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:11.503Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/artifactregistry.googleapis.com:enable [none]
+[debug] [2026-06-11T18:08:11.504Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/artifactregistry.googleapis.com:enable  x-goog-user-project=umn-interactive-map
+[debug] [2026-06-11T18:08:11.749Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/artifactregistry.googleapis.com:enable 200
+[debug] [2026-06-11T18:08:11.749Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/artifactregistry.googleapis.com:enable [omitted]
+[debug] [2026-06-11T18:08:11.899Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/cloudbuild.googleapis.com:enable 200
+[debug] [2026-06-11T18:08:11.900Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/cloudbuild.googleapis.com:enable [omitted]
+[debug] [2026-06-11T18:08:21.950Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:21.950Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:21.950Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/umn-interactive-map/adminSdkConfig [none]
+[debug] [2026-06-11T18:08:22.193Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/umn-interactive-map/adminSdkConfig 200
+[debug] [2026-06-11T18:08:22.193Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/umn-interactive-map/adminSdkConfig {"projectId":"umn-interactive-map","storageBucket":"umn-interactive-map.firebasestorage.app"}
+[debug] [2026-06-11T18:08:22.199Z] Validating nodejs source
+[debug] [2026-06-11T18:08:32.232Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync C:\WINDOWS\system32\cmd.exe ETIMEDOUT
+    at Object.spawnSync (node:internal/child_process:1143:20)
+    at Object.spawnSync (node:child_process:911:24)
+    at spawn.spawnSync [as sync] (C:\Users\JuliaFaig\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\cross-spawn\index.js:26:23)
+    at Object.getLatestSDKVersion (C:\Users\JuliaFaig\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\runtimes\node\versioning.js:55:25)
+    at Object.checkFunctionsSDKVersion (C:\Users\JuliaFaig\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\runtimes\node\versioning.js:74:32)
+    at Delegate.validate (C:\Users\JuliaFaig\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\runtimes\node\index.js:88:20)
+    at loadCodebases (C:\Users\JuliaFaig\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\prepare.js:385:31)
+    at async prepare (C:\Users\JuliaFaig\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\prepare.js:74:24)
+    at async chain (C:\Users\JuliaFaig\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:45:9)
+    at async deploy (C:\Users\JuliaFaig\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:124:9)
+[debug] [2026-06-11T18:08:32.235Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.4.1"
+  },
+  "private": true
+}
+[debug] [2026-06-11T18:08:32.237Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2026-06-11T18:08:32.241Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-06-11T18:08:32.258Z] Found firebase-functions binary at 'C:\Users\JuliaFaig\UMN-Interactive-Map\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8933
+
+[debug] [2026-06-11T18:08:38.556Z] Got response from /__/functions.yaml {"endpoints":{"handler":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"handler"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2026-06-11T18:08:42.622Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:42.623Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:42.623Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/umn-interactive-map/locations/-/functions [none]
+[debug] [2026-06-11T18:08:43.180Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/umn-interactive-map/locations/-/functions 200
+[debug] [2026-06-11T18:08:43.181Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/umn-interactive-map/locations/-/functions {}
+[debug] [2026-06-11T18:08:43.181Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:43.181Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:43.182Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2026-06-11T18:08:43.578Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/-/functions 200
+[debug] [2026-06-11T18:08:43.578Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/-/functions {}
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2026-06-11T18:08:43.583Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:43.583Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:43.584Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/firebaseextensions.googleapis.com [none]
+[debug] [2026-06-11T18:08:43.584Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/firebaseextensions.googleapis.com  x-goog-user-project=umn-interactive-map
+[debug] [2026-06-11T18:08:43.890Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/firebaseextensions.googleapis.com 200
+[debug] [2026-06-11T18:08:43.890Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/firebaseextensions.googleapis.com [omitted]
+[warn] !  extensions: missing required API firebaseextensions.googleapis.com. Enabling now... 
+[debug] [2026-06-11T18:08:43.891Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:43.891Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:43.891Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/firebaseextensions.googleapis.com:enable [none]
+[debug] [2026-06-11T18:08:43.891Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/firebaseextensions.googleapis.com:enable  x-goog-user-project=umn-interactive-map
+[debug] [2026-06-11T18:08:44.214Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/firebaseextensions.googleapis.com:enable 200
+[debug] [2026-06-11T18:08:44.214Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/umn-interactive-map/services/firebaseextensions.googleapis.com:enable [omitted]
+[debug] [2026-06-11T18:08:54.285Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-06-11T18:08:54.286Z] > authorizing via signed-in user (julia.faig8@gmail.com)
+[debug] [2026-06-11T18:08:54.286Z] [iam] checking project umn-interactive-map for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2026-06-11T18:08:54.287Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:54.287Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:54.287Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/umn-interactive-map:testIamPermissions [none]
+[debug] [2026-06-11T18:08:54.287Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/umn-interactive-map:testIamPermissions  x-goog-user-project=umn-interactive-map
+[debug] [2026-06-11T18:08:54.288Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/umn-interactive-map:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2026-06-11T18:08:54.477Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/umn-interactive-map:testIamPermissions 200
+[debug] [2026-06-11T18:08:54.478Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/umn-interactive-map:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2026-06-11T18:08:54.478Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:54.479Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:54.479Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/umn-interactive-map/instances pageSize=100&pageToken=
+[debug] [2026-06-11T18:08:55.804Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/umn-interactive-map/instances 200
+[debug] [2026-06-11T18:08:55.804Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/umn-interactive-map/instances {}
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged C:\Users\JuliaFaig\UMN-Interactive-Map\functions (383.18 KB) for uploading 
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[debug] [2026-06-11T18:08:56.249Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:56.249Z] Checked if tokens are valid: true, expires at: 1781203818720
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[debug] [2026-06-11T18:08:56.254Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:56.254Z] Checked if tokens are valid: true, expires at: 1781203818720
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[debug] [2026-06-11T18:08:56.259Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:56.260Z] Checked if tokens are valid: true, expires at: 1781203818720
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2026-06-11T18:08:56.262Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:56.262Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:56.263Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/1038286025751/services/run.googleapis.com [none]
+[debug] [2026-06-11T18:08:56.263Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/1038286025751/services/run.googleapis.com  x-goog-user-project=1038286025751
+[debug] [2026-06-11T18:08:56.264Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/1038286025751/services/eventarc.googleapis.com [none]
+[debug] [2026-06-11T18:08:56.264Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/1038286025751/services/eventarc.googleapis.com  x-goog-user-project=1038286025751
+[debug] [2026-06-11T18:08:56.265Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/1038286025751/services/pubsub.googleapis.com [none]
+[debug] [2026-06-11T18:08:56.266Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/1038286025751/services/pubsub.googleapis.com  x-goog-user-project=1038286025751
+[debug] [2026-06-11T18:08:56.268Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/1038286025751/services/storage.googleapis.com [none]
+[debug] [2026-06-11T18:08:56.269Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/1038286025751/services/storage.googleapis.com  x-goog-user-project=1038286025751
+[debug] [2026-06-11T18:08:56.476Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/1038286025751/services/pubsub.googleapis.com 200
+[debug] [2026-06-11T18:08:56.476Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/1038286025751/services/pubsub.googleapis.com [omitted]
+[info] +  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2026-06-11T18:08:56.530Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/1038286025751/services/run.googleapis.com 200
+[debug] [2026-06-11T18:08:56.530Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/1038286025751/services/run.googleapis.com [omitted]
+[warn] !  functions: missing required API run.googleapis.com. Enabling now... 
+[debug] [2026-06-11T18:08:56.531Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:56.531Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:56.531Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/1038286025751/services/run.googleapis.com:enable [none]
+[debug] [2026-06-11T18:08:56.532Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/1038286025751/services/run.googleapis.com:enable  x-goog-user-project=1038286025751
+[debug] [2026-06-11T18:08:56.534Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/1038286025751/services/eventarc.googleapis.com 200
+[debug] [2026-06-11T18:08:56.534Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/1038286025751/services/eventarc.googleapis.com [omitted]
+[warn] !  functions: missing required API eventarc.googleapis.com. Enabling now... 
+[debug] [2026-06-11T18:08:56.535Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:56.535Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:08:56.535Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/1038286025751/services/eventarc.googleapis.com:enable [none]
+[debug] [2026-06-11T18:08:56.535Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/1038286025751/services/eventarc.googleapis.com:enable  x-goog-user-project=1038286025751
+[debug] [2026-06-11T18:08:56.541Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/1038286025751/services/storage.googleapis.com 200
+[debug] [2026-06-11T18:08:56.542Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/1038286025751/services/storage.googleapis.com [omitted]
+[info] +  functions: required API storage.googleapis.com is enabled 
+[debug] [2026-06-11T18:08:56.770Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/1038286025751/services/eventarc.googleapis.com:enable 200
+[debug] [2026-06-11T18:08:56.770Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/1038286025751/services/eventarc.googleapis.com:enable [omitted]
+[debug] [2026-06-11T18:08:57.007Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/1038286025751/services/run.googleapis.com:enable 200
+[debug] [2026-06-11T18:08:57.007Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/1038286025751/services/run.googleapis.com:enable [omitted]
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[debug] [2026-06-11T18:09:07.067Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:07.068Z] Checked if tokens are valid: true, expires at: 1781203818720
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2026-06-11T18:09:07.068Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:07.069Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:07.069Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/1038286025751/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2026-06-11T18:09:07.069Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1beta1/projects/1038286025751/services/pubsub.googleapis.com:generateServiceIdentity  x-goog-user-project=1038286025751
+[debug] [2026-06-11T18:09:07.069Z] >>> [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/1038286025751/services/pubsub.googleapis.com:generateServiceIdentity {}
+[debug] [2026-06-11T18:09:07.073Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/1038286025751/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2026-06-11T18:09:07.073Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1beta1/projects/1038286025751/services/eventarc.googleapis.com:generateServiceIdentity  x-goog-user-project=1038286025751
+[debug] [2026-06-11T18:09:07.073Z] >>> [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/1038286025751/services/eventarc.googleapis.com:generateServiceIdentity {}
+[debug] [2026-06-11T18:09:07.863Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/1038286025751/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2026-06-11T18:09:07.863Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/1038286025751/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-1038286025751@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"106883007923059357162"}}
+[debug] [2026-06-11T18:09:07.894Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/1038286025751/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2026-06-11T18:09:07.894Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/1038286025751/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-1038286025751@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"105225066973871926525"}}
+[debug] [2026-06-11T18:09:07.902Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:07.902Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:07.903Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/umn-interactive-map [none]
+[debug] [2026-06-11T18:09:08.110Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/umn-interactive-map 200
+[debug] [2026-06-11T18:09:08.110Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/umn-interactive-map {"projectNumber":"1038286025751","projectId":"umn-interactive-map","lifecycleState":"ACTIVE","name":"UMN Interactive Map","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-06-11T16:06:35.751Z"}
+[debug] [2026-06-11T18:09:08.110Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:08.110Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:08.110Z] >>> [apiv2][query] GET https://compute.googleapis.com/compute/v1/projects/1038286025751 [none]
+[debug] [2026-06-11T18:09:08.328Z] <<< [apiv2][status] GET https://compute.googleapis.com/compute/v1/projects/1038286025751 403
+[debug] [2026-06-11T18:09:08.329Z] <<< [apiv2][body] GET https://compute.googleapis.com/compute/v1/projects/1038286025751 {"error":{"code":403,"message":"Compute Engine API has not been used in project 1038286025751 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=1038286025751 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 1038286025751 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=1038286025751 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"containerInfo":"1038286025751","activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=1038286025751","service":"compute.googleapis.com","serviceTitle":"Compute Engine API","consumer":"projects/1038286025751"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 1038286025751 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=1038286025751 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=1038286025751"}]}]}}
+[debug] [2026-06-11T18:09:08.330Z] unable to look up default compute service account. Falling back to 1038286025751-compute@developer.gserviceaccount.com. Error: {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":403,"message":"Compute Engine API has not been used in project 1038286025751 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=1038286025751 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 1038286025751 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=1038286025751 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"containerInfo":"1038286025751","activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=1038286025751","service":"compute.googleapis.com","serviceTitle":"Compute Engine API","consumer":"projects/1038286025751"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 1038286025751 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=1038286025751 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=1038286025751"}]}]}},"response":{"statusCode":403}},"exit":1,"message":"Request to https://compute.googleapis.com/compute/v1/projects/1038286025751 had HTTP Error: 403, Compute Engine API has not been used in project 1038286025751 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=1038286025751 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":403}
+[debug] [2026-06-11T18:09:08.331Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:08.331Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:08.331Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/umn-interactive-map/sites/umn-interactive-map [none]
+[debug] [2026-06-11T18:09:08.957Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/umn-interactive-map/sites/umn-interactive-map 200
+[debug] [2026-06-11T18:09:08.957Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/umn-interactive-map/sites/umn-interactive-map {"name":"projects/umn-interactive-map/sites/umn-interactive-map","defaultUrl":"https://umn-interactive-map.web.app","type":"DEFAULT_SITE"}
+[debug] [2026-06-11T18:09:08.962Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:08.962Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:08.962Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/umn-interactive-map/versions [none]
+[debug] [2026-06-11T18:09:08.963Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/umn-interactive-map/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-06-11T18:09:10.297Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/umn-interactive-map/versions 200
+[debug] [2026-06-11T18:09:10.297Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/umn-interactive-map/versions {"name":"projects/1038286025751/sites/umn-interactive-map/versions/ec841b0d11f75ab0","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-06-11T18:09:10.298Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:10.298Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:10.299Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/umn-interactive-map/releases pageSize=10&pageToken=
+[debug] [2026-06-11T18:09:10.472Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/umn-interactive-map/releases 200
+[debug] [2026-06-11T18:09:10.472Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/umn-interactive-map/releases {}
+[info] i  firestore: uploading rules firestore.rules... 
+[debug] [2026-06-11T18:09:10.474Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:10.474Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:10.475Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/umn-interactive-map/rulesets [none]
+[debug] [2026-06-11T18:09:10.475Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/umn-interactive-map/rulesets [omitted]
+[debug] [2026-06-11T18:09:10.660Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/umn-interactive-map/rulesets 200
+[debug] [2026-06-11T18:09:10.661Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/umn-interactive-map/rulesets {"name":"projects/umn-interactive-map/rulesets/c1cf8484-9a28-4c25-8638-bba3d880aea3","source":{"files":[{"content":"rules_version='2'\n\nservice cloud.firestore {\n  match /databases/{database}/documents {\n    match /{document=**} {\n      // This rule allows anyone with your database reference to view, edit,\n      // and delete all data in your database. It is useful for getting\n      // started, but it is configured to expire after 30 days because it\n      // leaves your app open to attackers. At that time, all client\n      // requests to your database will be denied.\n      //\n      // Make sure to write security rules for your app before that time, or\n      // else all client requests to your database will be denied until you\n      // update your rules.\n      allow read, write: if request.time < timestamp.date(2026, 7, 11);\n    }\n  }\n}\n","name":"firestore.rules"}]},"createTime":"2026-06-11T18:09:10.836521Z","metadata":{"services":["cloud.firestore"]}}
+[debug] [2026-06-11T18:09:10.661Z] [rules] created ruleset projects/umn-interactive-map/rulesets/c1cf8484-9a28-4c25-8638-bba3d880aea3
+[info] i  firestore: deploying indexes... 
+[debug] [2026-06-11T18:09:10.664Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:10.664Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:10.664Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/umn-interactive-map/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2026-06-11T18:09:10.945Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/umn-interactive-map/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2026-06-11T18:09:10.945Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/umn-interactive-map/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2026-06-11T18:09:10.945Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:10.946Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:10.946Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/umn-interactive-map/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2026-06-11T18:09:11.232Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/umn-interactive-map/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2026-06-11T18:09:11.232Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/umn-interactive-map/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/umn-interactive-map/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[debug] [2026-06-11T18:09:11.233Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:11.233Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:11.233Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/umn-interactive-map/databases/(default) [none]
+[debug] [2026-06-11T18:09:11.322Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/umn-interactive-map/databases/(default) 200
+[debug] [2026-06-11T18:09:11.322Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/umn-interactive-map/databases/(default) {"name":"projects/umn-interactive-map/databases/(default)","uid":"c6bb9bf0-691a-4555-918e-cfc572d22d24","createTime":"2026-06-11T18:06:50.028289Z","updateTime":"2026-06-11T18:06:50.028289Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2026-06-11T18:06:50.028289Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","databaseEdition":"STANDARD","freeTier":true,"realtimeUpdatesMode":"REALTIME_UPDATES_MODE_ENABLED","etag":"IIvp0Y7k/5QDMKGQy47k/5QD"}
+[info] +  firestore: deployed indexes in firestore.indexes.json successfully for (default) database 
+[debug] [2026-06-11T18:09:11.326Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:11.327Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:11.327Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/umn-interactive-map/billingInfo [none]
+[debug] [2026-06-11T18:09:11.538Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/umn-interactive-map/billingInfo 200
+[debug] [2026-06-11T18:09:11.539Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/umn-interactive-map/billingInfo {"name":"projects/umn-interactive-map/billingInfo","projectId":"umn-interactive-map","billingAccountName":"billingAccounts/0156C2-142129-BECE07","billingEnabled":true}
+[debug] [2026-06-11T18:09:11.541Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2026-06-11T18:09:11.541Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:11.541Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:11.541Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/umn-interactive-map:testIamPermissions [none]
+[debug] [2026-06-11T18:09:11.541Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/umn-interactive-map:testIamPermissions  x-goog-user-project=umn-interactive-map
+[debug] [2026-06-11T18:09:11.541Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/umn-interactive-map:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2026-06-11T18:09:11.617Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/umn-interactive-map:testIamPermissions 200
+[debug] [2026-06-11T18:09:11.617Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/umn-interactive-map:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2026-06-11T18:09:11.618Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2026-06-11T18:09:11.619Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:11.619Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:11.619Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2026-06-11T18:09:13.031Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2026-06-11T18:09:13.031Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-1038286025751.us-central1.cloudfunctions.appspot.com/71103371-49b7-453c-9f32-f2661e8a5136.zip?GoogleAccessId=service-1038286025751@gcf-admin-robot.iam.gserviceaccount.com&Expires=1781203153&Signature=OQ888%2BYhfckmrSg8HJ9azg6xRBkkFsh61qs9NRH0UU4L9l1MHP6ZoBMfWHHSFsHWZXAdlAXNvPBEfMxK%2BPHnGcj6Hkq3LKl%2BSF0xsqvfkrbnHig8dzM6o64t%2FRaABGjUFcDfb0PgPnKnbQwSjUVhxHKRRy1E8KbazOqfPI7h3MULIEpSi%2FPneh%2BHADPVOvROBMPyS42C0u7EY5PKmRFhP%2FiIedGpdeOaKToO1nyDkkpUued1pFqgP51LmyoYYgRCPtGgZ%2B1CN%2BWkxJ1AUHnGmi3CDBWIGPqDPCgDqS7imZi9erTcgoMJ5KT4utfmVTgG%2BoYHAmsrsDNen%2BemW8fbKw%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-1038286025751.us-central1.cloudfunctions.appspot.com","object":"71103371-49b7-453c-9f32-f2661e8a5136.zip"}}
+[debug] [2026-06-11T18:09:13.033Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-1038286025751.us-central1.cloudfunctions.appspot.com/71103371-49b7-453c-9f32-f2661e8a5136.zip GoogleAccessId=service-1038286025751%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1781203153&Signature=OQ888%2BYhfckmrSg8HJ9azg6xRBkkFsh61qs9NRH0UU4L9l1MHP6ZoBMfWHHSFsHWZXAdlAXNvPBEfMxK%2BPHnGcj6Hkq3LKl%2BSF0xsqvfkrbnHig8dzM6o64t%2FRaABGjUFcDfb0PgPnKnbQwSjUVhxHKRRy1E8KbazOqfPI7h3MULIEpSi%2FPneh%2BHADPVOvROBMPyS42C0u7EY5PKmRFhP%2FiIedGpdeOaKToO1nyDkkpUued1pFqgP51LmyoYYgRCPtGgZ%2B1CN%2BWkxJ1AUHnGmi3CDBWIGPqDPCgDqS7imZi9erTcgoMJ5KT4utfmVTgG%2BoYHAmsrsDNen%2BemW8fbKw%3D%3D
+[debug] [2026-06-11T18:09:13.033Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-1038286025751.us-central1.cloudfunctions.appspot.com/71103371-49b7-453c-9f32-f2661e8a5136.zip [stream]
+[debug] [2026-06-11T18:09:13.328Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-1038286025751.us-central1.cloudfunctions.appspot.com/71103371-49b7-453c-9f32-f2661e8a5136.zip 200
+[debug] [2026-06-11T18:09:13.329Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-1038286025751.us-central1.cloudfunctions.appspot.com/71103371-49b7-453c-9f32-f2661e8a5136.zip [omitted]
+[info] +  functions: functions source uploaded successfully 
+[info] i  hosting[umn-interactive-map]: beginning deploy... 
+[info] i  hosting[umn-interactive-map]: found 2 files in public 
+[debug] [2026-06-11T18:09:13.355Z] [hosting] uploading with 200 concurrency
+[debug] [2026-06-11T18:09:13.359Z] [hosting] hash cache [cHVibGlj] not populated
+[debug] [2026-06-11T18:09:13.388Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:13.388Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:13.397Z] [hosting] hash cache [cHVibGlj] stored for 2 files
+[debug] [2026-06-11T18:09:13.397Z] [hosting][hash queue][FINAL] {"max":26,"min":24,"avg":25,"active":0,"complete":2,"success":2,"errored":0,"retried":0,"total":2,"elapsed":35}
+[debug] [2026-06-11T18:09:13.397Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/1038286025751/sites/umn-interactive-map/versions/ec841b0d11f75ab0:populateFiles [none]
+[debug] [2026-06-11T18:09:13.397Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1038286025751/sites/umn-interactive-map/versions/ec841b0d11f75ab0:populateFiles {"files":{"/404.html":"762bf484ba67404bd1a3b181546ea28d60dfddf18e9dd4795d8d25bcf3c1a890","/index.html":"2d2b0c813628a70bd46d4e7ccc22c7b650055109ba37923dd6adf82a3fa68b7e"}}
+[debug] [2026-06-11T18:09:13.799Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/1038286025751/sites/umn-interactive-map/versions/ec841b0d11f75ab0:populateFiles 200
+[debug] [2026-06-11T18:09:13.799Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1038286025751/sites/umn-interactive-map/versions/ec841b0d11f75ab0:populateFiles {"uploadRequiredHashes":["762bf484ba67404bd1a3b181546ea28d60dfddf18e9dd4795d8d25bcf3c1a890","2d2b0c813628a70bd46d4e7ccc22c7b650055109ba37923dd6adf82a3fa68b7e"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/umn-interactive-map/versions/ec841b0d11f75ab0/files"}
+[debug] [2026-06-11T18:09:13.801Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:13.801Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:13.801Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:13.801Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:13.801Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/umn-interactive-map/versions/ec841b0d11f75ab0/files/762bf484ba67404bd1a3b181546ea28d60dfddf18e9dd4795d8d25bcf3c1a890 [none]
+[debug] [2026-06-11T18:09:13.801Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/umn-interactive-map/versions/ec841b0d11f75ab0/files/762bf484ba67404bd1a3b181546ea28d60dfddf18e9dd4795d8d25bcf3c1a890 [stream]
+[debug] [2026-06-11T18:09:13.804Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/umn-interactive-map/versions/ec841b0d11f75ab0/files/2d2b0c813628a70bd46d4e7ccc22c7b650055109ba37923dd6adf82a3fa68b7e [none]
+[debug] [2026-06-11T18:09:13.804Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/umn-interactive-map/versions/ec841b0d11f75ab0/files/2d2b0c813628a70bd46d4e7ccc22c7b650055109ba37923dd6adf82a3fa68b7e [stream]
+[debug] [2026-06-11T18:09:13.806Z] [hosting][populate queue][FINAL] {"max":413,"min":413,"avg":413,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":418}
+[debug] [2026-06-11T18:09:13.806Z] [hosting] uploads queued: 2
+[debug] [2026-06-11T18:09:14.356Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/umn-interactive-map/versions/ec841b0d11f75ab0/files/762bf484ba67404bd1a3b181546ea28d60dfddf18e9dd4795d8d25bcf3c1a890 200
+[debug] [2026-06-11T18:09:14.356Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/umn-interactive-map/versions/ec841b0d11f75ab0/files/762bf484ba67404bd1a3b181546ea28d60dfddf18e9dd4795d8d25bcf3c1a890 [stream]
+[debug] [2026-06-11T18:09:14.441Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/umn-interactive-map/versions/ec841b0d11f75ab0/files/2d2b0c813628a70bd46d4e7ccc22c7b650055109ba37923dd6adf82a3fa68b7e 200
+[debug] [2026-06-11T18:09:14.441Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/umn-interactive-map/versions/ec841b0d11f75ab0/files/2d2b0c813628a70bd46d4e7ccc22c7b650055109ba37923dd6adf82a3fa68b7e [stream]
+[debug] [2026-06-11T18:09:14.442Z] [hosting][upload queue][FINAL] {"max":641,"min":558,"avg":599.5,"active":0,"complete":2,"success":2,"errored":0,"retried":0,"total":2,"elapsed":643}
+[info] +  hosting[umn-interactive-map]: file upload complete 
+[debug] [2026-06-11T18:09:14.446Z] [hosting] deploy completed after 1112ms
+[debug] [2026-06-11T18:09:14.447Z] [rules] releasing cloud.firestore with ruleset projects/umn-interactive-map/rulesets/c1cf8484-9a28-4c25-8638-bba3d880aea3
+[debug] [2026-06-11T18:09:14.447Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:14.447Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:14.447Z] >>> [apiv2][query] PATCH https://firebaserules.googleapis.com/v1/projects/umn-interactive-map/releases/cloud.firestore [none]
+[debug] [2026-06-11T18:09:14.447Z] >>> [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/umn-interactive-map/releases/cloud.firestore {"release":{"name":"projects/umn-interactive-map/releases/cloud.firestore","rulesetName":"projects/umn-interactive-map/rulesets/c1cf8484-9a28-4c25-8638-bba3d880aea3"}}
+[debug] [2026-06-11T18:09:14.534Z] <<< [apiv2][status] PATCH https://firebaserules.googleapis.com/v1/projects/umn-interactive-map/releases/cloud.firestore 404
+[debug] [2026-06-11T18:09:14.534Z] <<< [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/umn-interactive-map/releases/cloud.firestore {"error":{"code":404,"message":"Requested entity was not found.","status":"NOT_FOUND"}}
+[debug] [2026-06-11T18:09:14.535Z] [rules] ruleset update failed, attempting to create instead
+[debug] [2026-06-11T18:09:14.535Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:14.535Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:14.535Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/umn-interactive-map/releases [none]
+[debug] [2026-06-11T18:09:14.535Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/umn-interactive-map/releases {"name":"projects/umn-interactive-map/releases/cloud.firestore","rulesetName":"projects/umn-interactive-map/rulesets/c1cf8484-9a28-4c25-8638-bba3d880aea3"}
+[debug] [2026-06-11T18:09:14.666Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/umn-interactive-map/releases 200
+[debug] [2026-06-11T18:09:14.666Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/umn-interactive-map/releases {"name":"projects/umn-interactive-map/releases/cloud.firestore","rulesetName":"projects/umn-interactive-map/rulesets/c1cf8484-9a28-4c25-8638-bba3d880aea3","createTime":"2026-06-11T18:09:14.848448Z","updateTime":"2026-06-11T18:09:14.848448Z"}
+[debug] [2026-06-11T18:09:14.666Z] [rules] created release projects/umn-interactive-map/releases/cloud.firestore
+[info] +  firestore: released rules firestore.rules to cloud.firestore 
+[info] i  functions: creating Node.js 24 (2nd Gen) function handler(us-central1)... 
+[debug] [2026-06-11T18:09:14.679Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:14.680Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:14.680Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/functions functionId=handler
+[debug] [2026-06-11T18:09:14.680Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/functions {"name":"projects/umn-interactive-map/locations/us-central1/functions/handler","buildConfig":{"runtime":"nodejs24","entryPoint":"handler","source":{"storageSource":{"bucket":"gcf-v2-uploads-1038286025751.us-central1.cloudfunctions.appspot.com","object":"71103371-49b7-453c-9f32-f2661e8a5136.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"umn-interactive-map\",\"storageBucket\":\"umn-interactive-map.firebasestorage.app\"}","GCLOUD_PROJECT":"umn-interactive-map","EVENTARC_CLOUD_EVENT_SOURCE":"projects/umn-interactive-map/locations/us-central1/services/handler","FUNCTION_TARGET":"handler","LOG_EXECUTION_ID":"true"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null,"directVpcNetworkInterface":null,"directVpcEgress":null},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"e6b91b53048baf14fc041d3d6d07435e6e5fdaa2"}}
+[debug] [2026-06-11T18:09:16.088Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/functions 200
+[debug] [2026-06-11T18:09:16.088Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/functions {"name":"projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-06-11T18:09:16.255177028Z","target":"projects/umn-interactive-map/locations/us-central1/functions/handler","verb":"create","cancelRequested":false,"apiVersion":"v2"},"done":false}
+[debug] [2026-06-11T18:09:16.088Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:16.089Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:16.089Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 [none]
+[debug] [2026-06-11T18:09:16.181Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 200
+[debug] [2026-06-11T18:09:16.181Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 {"name":"projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-06-11T18:09:16.255177028Z","target":"projects/umn-interactive-map/locations/us-central1/functions/handler","verb":"create","cancelRequested":false,"apiVersion":"v2"},"done":false}
+[debug] [2026-06-11T18:09:16.684Z] [create-default-us-central1-handler] Retrying task index 0
+[debug] [2026-06-11T18:09:16.685Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:16.685Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:16.685Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 [none]
+[debug] [2026-06-11T18:09:16.786Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 200
+[debug] [2026-06-11T18:09:16.786Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 {"name":"projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-06-11T18:09:16.255177028Z","target":"projects/umn-interactive-map/locations/us-central1/functions/handler","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/umn-interactive-map/locations/us-central1/functions/handler","buildConfig":{"runtime":"nodejs24","entryPoint":"handler","source":{"storageSource":{"bucket":"gcf-v2-sources-1038286025751-us-central1","object":"handler/function-source.zip","generation":"1781201355929168"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/umn-interactive-map/serviceAccounts/1038286025751-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/umn-interactive-map/locations/us-central1/services/handler","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"umn-interactive-map\",\"storageBucket\":\"umn-interactive-map.firebasestorage.app\"}","GCLOUD_PROJECT":"umn-interactive-map","EVENTARC_CLOUD_EVENT_SOURCE":"projects/umn-interactive-map/locations/us-central1/services/handler","FUNCTION_TARGET":"handler","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"1038286025751-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"e6b91b53048baf14fc041d3d6d07435e6e5fdaa2"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2026-06-11T18:09:17.792Z] [create-default-us-central1-handler] Retrying task index 0
+[debug] [2026-06-11T18:09:17.792Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:17.793Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:17.793Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 [none]
+[debug] [2026-06-11T18:09:17.900Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 200
+[debug] [2026-06-11T18:09:17.900Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 {"name":"projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-06-11T18:09:16.255177028Z","target":"projects/umn-interactive-map/locations/us-central1/functions/handler","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/umn-interactive-map/locations/us-central1/functions/handler","buildConfig":{"runtime":"nodejs24","entryPoint":"handler","source":{"storageSource":{"bucket":"gcf-v2-sources-1038286025751-us-central1","object":"handler/function-source.zip","generation":"1781201355929168"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/umn-interactive-map/serviceAccounts/1038286025751-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/umn-interactive-map/locations/us-central1/services/handler","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"umn-interactive-map\",\"storageBucket\":\"umn-interactive-map.firebasestorage.app\"}","GCLOUD_PROJECT":"umn-interactive-map","EVENTARC_CLOUD_EVENT_SOURCE":"projects/umn-interactive-map/locations/us-central1/services/handler","FUNCTION_TARGET":"handler","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"1038286025751-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"e6b91b53048baf14fc041d3d6d07435e6e5fdaa2"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2026-06-11T18:09:19.906Z] [create-default-us-central1-handler] Retrying task index 0
+[debug] [2026-06-11T18:09:19.907Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:19.907Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:19.907Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 [none]
+[debug] [2026-06-11T18:09:19.978Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 200
+[debug] [2026-06-11T18:09:19.978Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 {"name":"projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-06-11T18:09:16.255177028Z","target":"projects/umn-interactive-map/locations/us-central1/functions/handler","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/umn-interactive-map/locations/us-central1/functions/handler","buildConfig":{"runtime":"nodejs24","entryPoint":"handler","source":{"storageSource":{"bucket":"gcf-v2-sources-1038286025751-us-central1","object":"handler/function-source.zip","generation":"1781201355929168"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/umn-interactive-map/serviceAccounts/1038286025751-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/umn-interactive-map/locations/us-central1/services/handler","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"umn-interactive-map\",\"storageBucket\":\"umn-interactive-map.firebasestorage.app\"}","GCLOUD_PROJECT":"umn-interactive-map","EVENTARC_CLOUD_EVENT_SOURCE":"projects/umn-interactive-map/locations/us-central1/services/handler","FUNCTION_TARGET":"handler","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"1038286025751-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"e6b91b53048baf14fc041d3d6d07435e6e5fdaa2"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2026-06-11T18:09:23.988Z] [create-default-us-central1-handler] Retrying task index 0
+[debug] [2026-06-11T18:09:23.989Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:23.989Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:23.989Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 [none]
+[debug] [2026-06-11T18:09:24.080Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 200
+[debug] [2026-06-11T18:09:24.080Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 {"name":"projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-06-11T18:09:16.255177028Z","target":"projects/umn-interactive-map/locations/us-central1/functions/handler","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/umn-interactive-map/locations/us-central1/functions/handler","buildConfig":{"runtime":"nodejs24","entryPoint":"handler","source":{"storageSource":{"bucket":"gcf-v2-sources-1038286025751-us-central1","object":"handler/function-source.zip","generation":"1781201355929168"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/umn-interactive-map/serviceAccounts/1038286025751-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/umn-interactive-map/locations/us-central1/services/handler","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"umn-interactive-map\",\"storageBucket\":\"umn-interactive-map.firebasestorage.app\"}","GCLOUD_PROJECT":"umn-interactive-map","EVENTARC_CLOUD_EVENT_SOURCE":"projects/umn-interactive-map/locations/us-central1/services/handler","FUNCTION_TARGET":"handler","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"1038286025751-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"e6b91b53048baf14fc041d3d6d07435e6e5fdaa2"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2026-06-11T18:09:32.091Z] [create-default-us-central1-handler] Retrying task index 0
+[debug] [2026-06-11T18:09:32.091Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:32.091Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:32.091Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 [none]
+[debug] [2026-06-11T18:09:32.256Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 200
+[debug] [2026-06-11T18:09:32.256Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 {"name":"projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-06-11T18:09:16.255177028Z","target":"projects/umn-interactive-map/locations/us-central1/functions/handler","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/umn-interactive-map/locations/us-central1/functions/handler","buildConfig":{"runtime":"nodejs24","entryPoint":"handler","source":{"storageSource":{"bucket":"gcf-v2-sources-1038286025751-us-central1","object":"handler/function-source.zip","generation":"1781201355929168"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/umn-interactive-map/serviceAccounts/1038286025751-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/umn-interactive-map/locations/us-central1/services/handler","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"umn-interactive-map\",\"storageBucket\":\"umn-interactive-map.firebasestorage.app\"}","GCLOUD_PROJECT":"umn-interactive-map","EVENTARC_CLOUD_EVENT_SOURCE":"projects/umn-interactive-map/locations/us-central1/services/handler","FUNCTION_TARGET":"handler","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"1038286025751-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"e6b91b53048baf14fc041d3d6d07435e6e5fdaa2"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/1038286025751/locations/us-central1/builds/e6af9a0f-ab13-4d5a-836c-7d1d1f32a1ce","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/e6af9a0f-ab13-4d5a-836c-7d1d1f32a1ce?project=1038286025751"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/1038286025751/locations/us-central1/builds/e6af9a0f-ab13-4d5a-836c-7d1d1f32a1ce"},"done":false}
+[debug] [2026-06-11T18:09:42.259Z] [create-default-us-central1-handler] Retrying task index 0
+[debug] [2026-06-11T18:09:42.259Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:42.259Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:42.259Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 [none]
+[debug] [2026-06-11T18:09:42.396Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 200
+[debug] [2026-06-11T18:09:42.396Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 {"name":"projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-06-11T18:09:16.255177028Z","target":"projects/umn-interactive-map/locations/us-central1/functions/handler","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/umn-interactive-map/locations/us-central1/functions/handler","buildConfig":{"runtime":"nodejs24","entryPoint":"handler","source":{"storageSource":{"bucket":"gcf-v2-sources-1038286025751-us-central1","object":"handler/function-source.zip","generation":"1781201355929168"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/umn-interactive-map/serviceAccounts/1038286025751-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/umn-interactive-map/locations/us-central1/services/handler","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"umn-interactive-map\",\"storageBucket\":\"umn-interactive-map.firebasestorage.app\"}","GCLOUD_PROJECT":"umn-interactive-map","EVENTARC_CLOUD_EVENT_SOURCE":"projects/umn-interactive-map/locations/us-central1/services/handler","FUNCTION_TARGET":"handler","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"1038286025751-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"e6b91b53048baf14fc041d3d6d07435e6e5fdaa2"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/1038286025751/locations/us-central1/builds/e6af9a0f-ab13-4d5a-836c-7d1d1f32a1ce","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/e6af9a0f-ab13-4d5a-836c-7d1d1f32a1ce?project=1038286025751"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/1038286025751/locations/us-central1/builds/e6af9a0f-ab13-4d5a-836c-7d1d1f32a1ce"},"done":false}
+[debug] [2026-06-11T18:09:52.412Z] [create-default-us-central1-handler] Retrying task index 0
+[debug] [2026-06-11T18:09:52.414Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:52.415Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:09:52.415Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 [none]
+[debug] [2026-06-11T18:09:52.590Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 200
+[debug] [2026-06-11T18:09:52.590Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 {"name":"projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-06-11T18:09:16.255177028Z","target":"projects/umn-interactive-map/locations/us-central1/functions/handler","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/umn-interactive-map/locations/us-central1/functions/handler","buildConfig":{"runtime":"nodejs24","entryPoint":"handler","source":{"storageSource":{"bucket":"gcf-v2-sources-1038286025751-us-central1","object":"handler/function-source.zip","generation":"1781201355929168"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/umn-interactive-map/serviceAccounts/1038286025751-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/umn-interactive-map/locations/us-central1/services/handler","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"umn-interactive-map\",\"storageBucket\":\"umn-interactive-map.firebasestorage.app\"}","GCLOUD_PROJECT":"umn-interactive-map","EVENTARC_CLOUD_EVENT_SOURCE":"projects/umn-interactive-map/locations/us-central1/services/handler","FUNCTION_TARGET":"handler","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"1038286025751-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"e6b91b53048baf14fc041d3d6d07435e6e5fdaa2"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/1038286025751/locations/us-central1/builds/e6af9a0f-ab13-4d5a-836c-7d1d1f32a1ce","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/e6af9a0f-ab13-4d5a-836c-7d1d1f32a1ce?project=1038286025751"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/1038286025751/locations/us-central1/builds/e6af9a0f-ab13-4d5a-836c-7d1d1f32a1ce"},"done":false}
+[debug] [2026-06-11T18:10:02.602Z] [create-default-us-central1-handler] Retrying task index 0
+[debug] [2026-06-11T18:10:02.603Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:10:02.603Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:10:02.603Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 [none]
+[debug] [2026-06-11T18:10:02.769Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 200
+[debug] [2026-06-11T18:10:02.770Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 {"name":"projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-06-11T18:09:16.255177028Z","target":"projects/umn-interactive-map/locations/us-central1/functions/handler","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/umn-interactive-map/locations/us-central1/functions/handler","buildConfig":{"runtime":"nodejs24","entryPoint":"handler","source":{"storageSource":{"bucket":"gcf-v2-sources-1038286025751-us-central1","object":"handler/function-source.zip","generation":"1781201355929168"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/umn-interactive-map/serviceAccounts/1038286025751-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/umn-interactive-map/locations/us-central1/services/handler","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"umn-interactive-map\",\"storageBucket\":\"umn-interactive-map.firebasestorage.app\"}","GCLOUD_PROJECT":"umn-interactive-map","EVENTARC_CLOUD_EVENT_SOURCE":"projects/umn-interactive-map/locations/us-central1/services/handler","FUNCTION_TARGET":"handler","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"1038286025751-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"e6b91b53048baf14fc041d3d6d07435e6e5fdaa2"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/1038286025751/locations/us-central1/builds/e6af9a0f-ab13-4d5a-836c-7d1d1f32a1ce","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/e6af9a0f-ab13-4d5a-836c-7d1d1f32a1ce?project=1038286025751"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/1038286025751/locations/us-central1/builds/e6af9a0f-ab13-4d5a-836c-7d1d1f32a1ce"},"done":false}
+[debug] [2026-06-11T18:10:12.784Z] [create-default-us-central1-handler] Retrying task index 0
+[debug] [2026-06-11T18:10:12.785Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:10:12.785Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:10:12.785Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 [none]
+[debug] [2026-06-11T18:10:12.926Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 200
+[debug] [2026-06-11T18:10:12.926Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 {"name":"projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-06-11T18:09:16.255177028Z","target":"projects/umn-interactive-map/locations/us-central1/functions/handler","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/umn-interactive-map/locations/us-central1/functions/handler","buildConfig":{"runtime":"nodejs24","entryPoint":"handler","source":{"storageSource":{"bucket":"gcf-v2-sources-1038286025751-us-central1","object":"handler/function-source.zip","generation":"1781201355929168"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/umn-interactive-map/serviceAccounts/1038286025751-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/umn-interactive-map/locations/us-central1/services/handler","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"umn-interactive-map\",\"storageBucket\":\"umn-interactive-map.firebasestorage.app\"}","GCLOUD_PROJECT":"umn-interactive-map","EVENTARC_CLOUD_EVENT_SOURCE":"projects/umn-interactive-map/locations/us-central1/services/handler","FUNCTION_TARGET":"handler","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"1038286025751-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"e6b91b53048baf14fc041d3d6d07435e6e5fdaa2"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/1038286025751/locations/us-central1/builds/e6af9a0f-ab13-4d5a-836c-7d1d1f32a1ce","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/e6af9a0f-ab13-4d5a-836c-7d1d1f32a1ce?project=1038286025751"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/1038286025751/locations/us-central1/builds/e6af9a0f-ab13-4d5a-836c-7d1d1f32a1ce"},"done":false}
+[debug] [2026-06-11T18:10:22.936Z] [create-default-us-central1-handler] Retrying task index 0
+[debug] [2026-06-11T18:10:22.936Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:10:22.936Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:10:22.936Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 [none]
+[debug] [2026-06-11T18:10:23.135Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 200
+[debug] [2026-06-11T18:10:23.135Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1 {"name":"projects/umn-interactive-map/locations/us-central1/operations/operation-1781201354971-653fe4209586a-08f099f4-84ae21e1","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2026-06-11T18:09:16.255177028Z","endTime":"2026-06-11T18:10:16.665481840Z","target":"projects/umn-interactive-map/locations/us-central1/functions/handler","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/umn-interactive-map/locations/us-central1/functions/handler","buildConfig":{"runtime":"nodejs24","entryPoint":"handler","source":{"storageSource":{"bucket":"gcf-v2-sources-1038286025751-us-central1","object":"handler/function-source.zip","generation":"1781201355929168"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/umn-interactive-map/serviceAccounts/1038286025751-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/umn-interactive-map/locations/us-central1/services/handler","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"umn-interactive-map\",\"storageBucket\":\"umn-interactive-map.firebasestorage.app\"}","GCLOUD_PROJECT":"umn-interactive-map","EVENTARC_CLOUD_EVENT_SOURCE":"projects/umn-interactive-map/locations/us-central1/services/handler","FUNCTION_TARGET":"handler","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"1038286025751-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"e6b91b53048baf14fc041d3d6d07435e6e5fdaa2"},"environment":"GEN_2"},"stages":[{"name":"ARTIFACT_REGISTRY","message":"Deleting function artifacts in Artifact Registry","state":"COMPLETE"},{"name":"SERVICE","message":"Deleting Cloud Run service","state":"COMPLETE","resource":"projects/umn-interactive-map/locations/us-central1/services/handler"}],"operationType":"CREATE_FUNCTION"},"done":true,"error":{"code":3,"message":"Build failed with status: FAILURE. Could not build the function due to a missing permission on the build service account. If you didn't revoke that permission explicitly, this could be caused by a change in the organization policies. Please refer to the following documentation for more details and resolution: https://cloud.google.com/functions/docs/troubleshooting#build-service-account\n You can also view the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/e6af9a0f-ab13-4d5a-836c-7d1d1f32a1ce?project=1038286025751.\n"}}
+[debug] [2026-06-11T18:10:23.135Z] Got source token undefined for region us-central1
+[error] Build failed with status: FAILURE. Could not build the function due to a missing permission on the build service account. If you didn't revoke that permission explicitly, this could be caused by a change in the organization policies. Please refer to the following documentation for more details and resolution: https://cloud.google.com/functions/docs/troubleshooting#build-service-account
+ You can also view the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/e6af9a0f-ab13-4d5a-836c-7d1d1f32a1ce?project=1038286025751.
+
+[warn] !  functions: Deploys failed. Skipping deletes. 
+[debug] [2026-06-11T18:10:23.152Z] Total Function Deployment time: 68463
+[debug] [2026-06-11T18:10:23.153Z] 1 Functions Deployed
+[debug] [2026-06-11T18:10:23.153Z] 1 Functions Errored
+[debug] [2026-06-11T18:10:23.153Z] 0 Function Deployments Aborted
+[debug] [2026-06-11T18:10:23.153Z] Average Function Deployment time: 68460
+[info] 
+[info] Functions deploy had errors with the following functions:
+	handler(us-central1)
+[debug] [2026-06-11T18:10:23.157Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[debug] [2026-06-11T18:10:23.158Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:10:23.158Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:10:23.158Z] >>> [apiv2][query] GET https://artifactregistry.googleapis.com/v1/projects/umn-interactive-map/locations/us-central1/repositories/gcf-artifacts [none]
+[debug] [2026-06-11T18:10:23.380Z] <<< [apiv2][status] GET https://artifactregistry.googleapis.com/v1/projects/umn-interactive-map/locations/us-central1/repositories/gcf-artifacts 200
+[debug] [2026-06-11T18:10:23.381Z] <<< [apiv2][body] GET https://artifactregistry.googleapis.com/v1/projects/umn-interactive-map/locations/us-central1/repositories/gcf-artifacts {"name":"projects/umn-interactive-map/locations/us-central1/repositories/gcf-artifacts","format":"DOCKER","description":"This repository is created and used by Cloud Functions for storing function docker images.","labels":{"goog-managed-by":"cloudfunctions"},"createTime":"2026-06-11T18:09:24.971856Z","updateTime":"2026-06-11T18:09:24.971856Z","mode":"STANDARD_REPOSITORY","vulnerabilityScanningConfig":{"lastEnableTime":"2026-06-11T18:09:16.497498009Z","enablementState":"SCANNING_DISABLED","enablementStateReason":"API containerscanning.googleapis.com is not enabled."},"satisfiesPzi":true,"registryUri":"us-central1-docker.pkg.dev/umn-interactive-map/gcf-artifacts"}
+[warn] !  functions: No cleanup policy detected for repositories in us-central1. This may result in a small monthly bill as container images accumulate over time. 
+[info] i  functions: Configuring cleanup policy for repository in us-central1. Images older than 1 days will be automatically deleted. 
+[debug] [2026-06-11T18:10:35.649Z] Setting up artifact cleanup policy for region us-central1
+[debug] [2026-06-11T18:10:35.650Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:10:35.650Z] Checked if tokens are valid: true, expires at: 1781203818720
+[debug] [2026-06-11T18:10:35.650Z] >>> [apiv2][query] PATCH https://artifactregistry.googleapis.com/v1/projects/umn-interactive-map/locations/us-central1/repositories/gcf-artifacts updateMask=name%2CcleanupPolicies%2CcleanupPolicyDryRun%2Clabels
+[debug] [2026-06-11T18:10:35.650Z] >>> [apiv2][body] PATCH https://artifactregistry.googleapis.com/v1/projects/umn-interactive-map/locations/us-central1/repositories/gcf-artifacts {"name":"projects/umn-interactive-map/locations/us-central1/repositories/gcf-artifacts","cleanupPolicies":{"firebase-functions-cleanup":{"id":"firebase-functions-cleanup","condition":{"tagState":"ANY","olderThan":"86400s"},"action":"DELETE"}},"cleanupPolicyDryRun":false,"labels":{"goog-managed-by":"cloudfunctions"}}
+[debug] [2026-06-11T18:10:35.837Z] <<< [apiv2][status] PATCH https://artifactregistry.googleapis.com/v1/projects/umn-interactive-map/locations/us-central1/repositories/gcf-artifacts 200
+[debug] [2026-06-11T18:10:35.837Z] <<< [apiv2][body] PATCH https://artifactregistry.googleapis.com/v1/projects/umn-interactive-map/locations/us-central1/repositories/gcf-artifacts {"name":"projects/umn-interactive-map/locations/us-central1/repositories/gcf-artifacts","format":"DOCKER","description":"This repository is created and used by Cloud Functions for storing function docker images.","labels":{"goog-managed-by":"cloudfunctions"},"createTime":"2026-06-11T18:09:24.971856Z","updateTime":"2026-06-11T18:10:35.995028Z","mode":"STANDARD_REPOSITORY","cleanupPolicies":{"firebase-functions-cleanup":{"id":"firebase-functions-cleanup","action":"DELETE","condition":{"tagState":"ANY","olderThan":"86400s"}}},"vulnerabilityScanningConfig":{"lastEnableTime":"2026-06-11T18:09:16.497498009Z","enablementState":"SCANNING_DISABLED","enablementStateReason":"API containerscanning.googleapis.com is not enabled."},"satisfiesPzi":true}
+[info] i  functions: Configured cleanup policy for repository in us-central1. 
+[debug] [2026-06-11T18:10:35.837Z] Functions deploy failed.
+[debug] [2026-06-11T18:10:35.838Z] {
+  "endpoint": {
+    "id": "handler",
+    "project": "umn-interactive-map",
+    "region": "us-central1",
+    "entryPoint": "handler",
+    "platform": "gcfv2",
+    "runtime": "nodejs24",
+    "httpsTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "serviceAccount": null,
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"umn-interactive-map\",\"storageBucket\":\"umn-interactive-map.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "umn-interactive-map",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/umn-interactive-map/locations/us-central1/services/handler"
+    },
+    "codebase": "default",
+    "cpu": 1,
+    "targetedByOnly": false,
+    "hash": "e6b91b53048baf14fc041d3d6d07435e6e5fdaa2"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "exit": 1,
+    "message": "Build failed with status: FAILURE. Could not build the function due to a missing permission on the build service account. If you didn't revoke that permission explicitly, this could be caused by a change in the organization policies. Please refer to the following documentation for more details and resolution: https://cloud.google.com/functions/docs/troubleshooting#build-service-account\n You can also view the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/e6af9a0f-ab13-4d5a-836c-7d1d1f32a1ce?project=1038286025751.\n",
+    "original": {
+      "code": 3,
+      "message": "Build failed with status: FAILURE. Could not build the function due to a missing permission on the build service account. If you didn't revoke that permission explicitly, this could be caused by a change in the organization policies. Please refer to the following documentation for more details and resolution: https://cloud.google.com/functions/docs/troubleshooting#build-service-account\n You can also view the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/e6af9a0f-ab13-4d5a-836c-7d1d1f32a1ce?project=1038286025751.\n"
+    },
+    "status": 3,
+    "code": 3
+  }
+}
+[debug] [2026-06-11T18:10:35.848Z] Error: Failed to create function handler in region us-central1
+    at C:\Users\JuliaFaig\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:332:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Fabricator.createV2Function (C:\Users\JuliaFaig\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:311:30)
+    at async Fabricator.createEndpoint (C:\Users\JuliaFaig\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:153:13)
+    at async Fabricator.wrapOperation (C:\Users\JuliaFaig\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:138:13)
+    at async Promise.all (index 0)
+    at async Promise.allSettled (index 0)
+    at async Fabricator.applyPlan (C:\Users\JuliaFaig\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:77:45)
+    at async release (C:\Users\JuliaFaig\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\index.js:87:21)
+    at async chain (C:\Users\JuliaFaig\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:45:9)
+[error] 
+[error] Error: There was an error deploying functions
