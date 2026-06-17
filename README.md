@@ -7,5 +7,11 @@ Leaflet, HTML, CSS, JS, JQuery, Firebase
 
 <img width="1114" height="596" alt="Screenshot 2026-06-16 155117" src="https://github.com/user-attachments/assets/ce953e6a-8990-4e51-9191-a6ad38af50da" />
 
-### Updates
+## Updates
 06.16.2026: Migrated repository from UMN Github to Github since UMN Github is getting discontinued
+
+
+### Active Contributors (Fall 2025, Summer 2026 - Present):
+Julia Faig,  
+### Contributors (Fall 2025): 
+Julia Faig, Qingwen Han, Ian Young, Emma, Nguyen, Mounika Macha, Deena Maier, Aarush Singh, Saloni Shah, Emily Ma, Jordan McVay, Joy Deng
