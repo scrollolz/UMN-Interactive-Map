@@ -15,7 +15,21 @@ const campusLocations = {
 
 const map = L.map("map", {
   zoomControl: false,
-}).setView(campusLocations["East Bank"].center, campusLocations["East Bank"].zoom);
+});
+
+map.locate({setView: true, maxZoom: 16});
+
+map.on("locationfound", function (e) {
+  map.setView(e.latlng, 20);
+});
+
+// If location access is denied or unavailable
+map.on("locationerror", function () {
+  map.setView(
+    campusLocations["East Bank"].center,
+    campusLocations["East Bank"].zoom
+  );
+});
 
 L.tileLayer("https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png", {
   attribution: "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
