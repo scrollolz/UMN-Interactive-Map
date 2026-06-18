@@ -9,5 +9,3 @@ Leaflet, HTML, CSS, JS, JQuery, Firebase
 
 ### Updates
 06.16.2026: Migrated repository from UMN Github to Github since UMN Github is getting discontinued
-
-test
