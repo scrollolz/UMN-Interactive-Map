@@ -81,6 +81,7 @@ const markerColors = {
   parkinggarages: {url: "../icons/parking.png", size: [21, 21]},
   busstops: {url: "../icons/bus.png", size: [30, 30]},
   bike: {url: "../icons/bike.png", size: [30, 30]},
+  cseprinting: {url: "../icons/printer.png", size: [21, 21]},
 };
 
 // Category name mapping for search (category key -> display names)
@@ -188,6 +189,11 @@ layerGroups.bathrooms = L.geoJSON(bathrooms, {
 
 layerGroups.busstops = L.geoJSON(busstops, {
   pointToLayer: (feature, latlng) => createCustomMarker(feature, latlng, markerColors.busstops),
+  onEachFeature: onEachFeature,
+}).addTo(map);
+
+layerGroups.cseprinting = L.geoJSON(cseprinting, {
+  pointToLayer: (feature, latlng) => createCustomMarker(feature, latlng, markerColors.cseprinting),
   onEachFeature: onEachFeature,
 }).addTo(map);
 
